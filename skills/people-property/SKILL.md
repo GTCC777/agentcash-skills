@@ -173,7 +173,7 @@ At $0.44 per call, Whitepages is the most expensive endpoint in the x402 suite.
 **Tips to reduce costs:**
 - Provide as much info as possible for accurate first-try results
 - Use free sources first (LinkedIn, company websites)
-- Use apollo, clado, firecrawl, WebSearch, WebFetch, to get data that will make the queries more accurate
+- Use FullEnrich, PDL, Clado, firecrawl, WebSearch, WebFetch to get data that will make the queries more accurate
 - Only use for essential lookups
 
 ## Limitations

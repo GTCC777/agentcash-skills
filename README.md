@@ -41,7 +41,7 @@ npx skills add Merit-Systems/agentcash-skills/mcp --all --yes
 | [social-scraping](skills/social-scraping/) | Scrape profiles, posts, followers across 6 platforms | StableSocial |
 | [email](skills/email/) | Send emails, forwarding inboxes, custom subdomains | StableEmail |
 | [phone-calls](skills/phone-calls/) | AI phone calls, buy phone numbers | StablePhone |
-| [data-enrichment](skills/data-enrichment/) | Person, company, & influencer profiles; email verification | Apollo, Clado, Hunter, Influencer |
+| [data-enrichment](skills/data-enrichment/) | Person, company profiles; email verification | FullEnrich, PDL, CompanyEnrich, Clado, Hunter, Minerva |
 | [web-research](skills/web-research/) | Web search & scraping | Exa, Firecrawl |
 | [local-search](skills/local-search/) | Places & business info | Google Maps |
 | [social-intelligence](skills/social-intelligence/) | Reddit search | Reddit |
@@ -71,12 +71,12 @@ npx agentcash@latest discover https://stableenrich.dev
 
 4. **Check endpoint pricing before calling:**
 ```bash
-npx agentcash@latest check https://stableenrich.dev/api/apollo/people-enrich
+npx agentcash@latest check https://stableenrich.dev/api/fullenrich/people-search
 ```
 
 5. **Make API calls:**
 ```bash
-npx agentcash@latest fetch https://stableenrich.dev/api/apollo/people-enrich -m POST -b '{"email": "user@company.com"}'
+npx agentcash@latest fetch https://stableenrich.dev/api/pdl/people-enrich -m POST -b '{"profile":"https://www.linkedin.com/in/example"}'
 ```
 
 ### MCP mode
@@ -100,15 +100,15 @@ agentcash.discover_api_endpoints(url="https://stableenrich.dev")
 
 4. **Check endpoint pricing before calling:**
 ```mcp
-agentcash.check_endpoint_schema(url="https://stableenrich.dev/api/apollo/people-enrich")
+agentcash.check_endpoint_schema(url="https://stableenrich.dev/api/fullenrich/people-search")
 ```
 
 5. **Make API calls:**
 ```mcp
 agentcash.fetch(
-  url="https://stableenrich.dev/api/apollo/people-enrich",
+  url="https://stableenrich.dev/api/pdl/people-enrich",
   method="POST",
-  body={"email": "user@company.com"}
+  body={"profile": "https://www.linkedin.com/in/example"}
 )
 ```
 
@@ -118,8 +118,8 @@ agentcash.fetch(
 
 | Wrong (guessed) | Correct |
 |-----------------|---------|
-| `/api/people/search` | `https://stableenrich.dev/api/apollo/people-search` |
-| `/api/people-enrich` | `https://stableenrich.dev/api/apollo/people-enrich` |
+| `/api/people/search` | `https://stableenrich.dev/api/fullenrich/people-search` |
+| `/api/people-enrich` | `https://stableenrich.dev/api/pdl/people-enrich` |
 
 If you don't know the exact endpoint path:
 1. **Use search** to find the right service by describing what you need

@@ -9,7 +9,7 @@ description: |
   TRIGGERS: research, enrich, scrape, search the web, generate image, video, social media, send email, phone call, travel, jobs, find contact, find API, x402, mpp, agentcash
 homepage: https://agentcash.dev
 metadata:
-  version: 2.2
+  version: 3.0
 ---
 
 # AgentCash — Paid API Access
@@ -73,7 +73,7 @@ Returns all endpoints, pricing, and usage instructions. **Read the `instructions
 ### 3. Check schema (optional)
 
 ```mcp
-agentcash.check_endpoint_schema(url="https://stableenrich.dev/api/apollo/people-search")
+agentcash.check_endpoint_schema(url="https://stableenrich.dev/api/fullenrich/people-search")
 ```
 
 Returns full request/response JSON schemas and pricing for a specific endpoint.
@@ -82,9 +82,12 @@ Returns full request/response JSON schemas and pricing for a specific endpoint.
 
 ```mcp
 agentcash.fetch(
-  url="https://stableenrich.dev/api/apollo/people-search",
+  url="https://stableenrich.dev/api/fullenrich/people-search",
   method="POST",
-  body={"person_titles": ["CEO"], "person_locations": ["San Francisco"]}
+  body={
+    "current_company_domains": [{"value": "stripe.com"}],
+    "current_position_seniority_level": [{"value": "VP"}]
+  }
 )
 ```
 
@@ -95,7 +98,7 @@ Payment is automatic: sends request, gets 402 challenge, signs USDC payment, ret
 
 | Origin | Service | What it does |
 |---|---|---|
-| `https://stableenrich.dev` | StableEnrich | Research APIs: Apollo (people/org), Exa (web search), Firecrawl (scraping), Google Maps, Clado (LinkedIn), Serper (news/shopping), WhitePages, Reddit, Hunter (email verification), Influencer enrichment |
+| `https://stableenrich.dev` | StableEnrich | FullEnrich / CompanyEnrich / PDL people & company search, Minerva, Exa (web search), Firecrawl (scraping), Google Maps, Clado (contacts), Serper (news/shopping), WhitePages, Reddit, Hunter (email verification) |
 | `https://stableupload.dev` | StableUpload | Pay-per-upload file hosting. 10MB/$0.02, 100MB/$0.20, 1GB/$2.00. 6-month TTL |
 | `https://stablestudio.dev` | StableStudio | AI image/video generation: GPT Image, Flux, Nano Banana, Sora, Veo, Seedance, Wan |
 | `https://stablesocial.dev` | StableSocial | Social media data: TikTok, Instagram, Facebook, Reddit, LinkedIn. $0.06/call, async two-step |

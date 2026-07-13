@@ -55,7 +55,7 @@ This is sensitive personal information. Handle appropriately:
 | Need | Better Alternative |
 |------|-------------------|
 | Professional contact | LinkedIn, company website |
-| Business info | Apollo org-enrich |
+| Business info | CompanyEnrich org-enrich |
 | Email verification | Clado contacts-enrich |
 | General background | Public social profiles |
 
