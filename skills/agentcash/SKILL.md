@@ -9,7 +9,7 @@ description: |
   TRIGGERS: research, enrich, scrape, search the web, generate image, video, social media, send email, phone call, travel, jobs, find contact, find API, x402, mpp, agentcash
 homepage: https://agentcash.dev
 metadata:
-  version: 3.0
+  version: 3
 ---
 
 # AgentCash — Paid API Access

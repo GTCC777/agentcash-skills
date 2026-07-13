@@ -23,6 +23,8 @@ description: |
   IMPORTANT: Call check_endpoint_schema before first fetch on any endpoint. Field names are provider-specific — do not reuse Apollo, PDL, or other-provider shapes on FullEnrich routes.
 mcp:
   - agentcash
+metadata:
+  version: 3
 ---
 
 # Data Enrichment with x402 APIs

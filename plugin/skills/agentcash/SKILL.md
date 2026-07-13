@@ -5,7 +5,7 @@ description: |
   If the task matches a SERVICES origin below, SKIP search and go straight to discover → fetch.
   Only search when NO listed origin fits.
 
-  SERVICES: stableenrich (people/company, web search, scraping, Maps, LinkedIn, email verify, news), stablesocial (TikTok, Instagram, Facebook, Reddit, LinkedIn), stablestudio (AI image/video), stableupload (file/site hosting), stableemail (email, inboxes, subdomains), stablephone (AI calls, phone numbers), stablejobs (jobs), stabletravel (travel), stablebrowser (browser automation).
+  SERVICES: stableenrich (people/company, web search, scraping, Maps, LinkedIn, email verify, news), stablesocial (TikTok, Instagram, Facebook, Reddit), stablestudio (AI image/video), stableupload (file/site hosting), stableemail (email, inboxes, subdomains), stablephone (AI calls, phone numbers), stablejobs (jobs), stabletravel (travel), stablebrowser (browser automation).
   TRIGGERS: research, enrich, scrape, search the web, generate image, video, social media, send email, phone call, travel, jobs, find contact, find API, x402, mpp, agentcash
 homepage: https://agentcash.dev
 metadata:
@@ -101,7 +101,7 @@ Payment is automatic: sends request, gets 402 challenge, signs USDC payment, ret
 | `https://stableenrich.dev` | StableEnrich | FullEnrich / CompanyEnrich / PDL people & company search, Minerva, Exa (web search), Firecrawl (scraping), Google Maps, Clado (contacts), Serper (news/shopping), WhitePages, Reddit, Hunter (email verification) |
 | `https://stableupload.dev` | StableUpload | Pay-per-upload file hosting. 10MB/$0.02, 100MB/$0.20, 1GB/$2.00. 6-month TTL |
 | `https://stablestudio.dev` | StableStudio | AI image/video generation: GPT Image, Flux, Nano Banana, Sora, Veo, Seedance, Wan |
-| `https://stablesocial.dev` | StableSocial | Social media data: TikTok, Instagram, Facebook, Reddit, LinkedIn. $0.06/call, async two-step |
+| `https://stablesocial.dev` | StableSocial | Social media data: TikTok, Instagram, Facebook, Reddit. $0.06/call, async two-step |
 | `https://stableemail.dev` | StableEmail | Send emails ($0.02), forwarding inboxes ($1/mo), custom subdomains ($5) |
 | `https://stablephone.dev` | StablePhone | AI phone calls ($0.54), phone numbers ($20), top-ups ($15) |
 | `https://stablejobs.dev` | StableJobs | Job search via Coresignal |

@@ -31,14 +31,13 @@
 
 | Endpoint | Price |
 |----------|-------|
-| people-enrich | $0.0495 |
-| org-enrich | $0.0495 |
-| people-search | $0.02 |
-| org-search | $0.02 |
-| contacts-enrich | $0.20 |
-| email-verifier (Hunter) | $0.03 |
-| influencer enrich-by-email | $0.40 |
-| influencer enrich-by-social | $0.40 |
+| fullenrich/people-search | $0.14 (if results) |
+| fullenrich/company-search | $0.14 (if results) |
+| pdl/people-enrich | $0.28 (if match) |
+| companyenrich/org-enrich | $0.06 |
+| companyenrich/properties-enrich | $0.06 |
+| clado/contacts-enrich | $0.20 |
+| hunter/email-verifier | $0.03 |
 | minerva/resolve | $0.02 |
 | minerva/enrich | $0.05 |
 | minerva/validate-emails | $0.01 |
