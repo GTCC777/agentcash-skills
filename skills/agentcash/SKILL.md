@@ -9,7 +9,7 @@ description: |
   TRIGGERS: research, enrich, scrape, search the web, generate image, video, social media, send email, phone call, travel, jobs, find contact, find API, x402, mpp, agentcash
 homepage: https://agentcash.dev
 metadata:
-  version: 2.2
+  version: 3
 ---
 
 # AgentCash — Paid API Access
@@ -100,7 +100,7 @@ Any endpoint that is payment-protected can be accessed with AgentCash. If `npx a
 
 | Origin | What it does |
 |--------|-------------|
-| `stableenrich.dev` | Apollo (people/org search), Minerva (identity/enrichment), Exa (web search), Firecrawl (scraping), Cloudflare (site crawling), Google Maps, Clado (contacts), Serper (news/shopping), WhitePages, Hunter (email verification), Influencer |
+| `stableenrich.dev` | FullEnrich / CompanyEnrich / PDL people & company search, Minerva, Exa (web search), Firecrawl (scraping), Cloudflare (site crawling), Google Maps, Clado (contacts), Serper (news/shopping), WhitePages, Hunter (email verification) |
 | `stablesocial.dev` | Social media data: TikTok, Instagram, Facebook, Reddit ($0.06/call, async two-step) |
 | `stablestudio.dev` | AI image/video generation: GPT Image, Flux, Grok, Nano Banana, Sora, Veo, Seedance, Wan |
 | `stableupload.dev` | File hosting (10MB/$0.02, 100MB/$0.20, 1GB/$2.00) + static site hosting with custom domains |
@@ -116,7 +116,7 @@ Run `npx agentcash@latest discover <origin>` on any origin to see its full endpo
 ## Important Rules
 
 - **Skip search when a listed origin fits the task.** Go straight to `discover`. Only use `search` when no origin in the Available Services table matches.
-- **Always discover before guessing.** Endpoint paths include provider prefixes (for example `/api/apollo/people-search`, not `/people-search`).
+- **Always discover before guessing.** Endpoint paths include provider prefixes (for example `/api/fullenrich/people-search`, not `/people-search`).
 - **Read the instructions field.** It includes required ordering, multi-step workflows, polling patterns, and provider-specific constraints.
 - **Payments settle on success only.** Failed requests (non-2xx) do not cost anything.
 - **Check balance before expensive operations.** Video generation can cost $1-3 per call.
