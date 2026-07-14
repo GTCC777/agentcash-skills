@@ -17,11 +17,11 @@ description: |
   IMPORTANT: These endpoints contain personal information. Use responsibly and only for legitimate purposes.
   See rules/privacy.md for guidance.
 
-  Use agentcash.fetch for Whitepages endpoints. Both endpoints are $0.44 per call.
+  Use agentcash.fetch for Whitepages endpoints. Both endpoints are $0.22 per call.
 mcp:
   - agentcash
 metadata:
-  version: 2
+  version: 2.1
 ---
 
 # People & Property Search with Whitepages
@@ -38,8 +38,8 @@ See [rules/getting-started.md](rules/getting-started.md) for installation and wa
 
 | Task | Endpoint | Price | Description |
 |------|----------|-------|-------------|
-| Person search | `https://stableenrich.dev/api/whitepages/person-search` | $0.44 | Find people by name/location |
-| Property search | `https://stableenrich.dev/api/whitepages/property-search` | $0.44 | Property and owner info |
+| Person search | `https://stableenrich.dev/api/whitepages/person-search` | $0.22 | Find people by name/location |
+| Property search | `https://stableenrich.dev/api/whitepages/property-search` | $0.22 | Property and owner info |
 
 ## Person Search
 
@@ -187,13 +187,13 @@ agentcash.fetch(
 
 ## Cost Considerations
 
-At $0.44 per call, Whitepages is the most expensive endpoint in the x402 suite.
+At $0.22 per call, Whitepages is the most expensive endpoint in the x402 suite.
 
 | Scenario | Cost |
 |----------|------|
-| Single lookup | $0.44 |
-| Verify address + person | $0.88 |
-| Multiple candidates | $1.32+ |
+| Single lookup | $0.22 |
+| Verify address + person | $0.44 |
+| Multiple candidates | $0.66+ |
 
 **Tips to reduce costs:**
 - Provide as much info as possible for accurate first-try results

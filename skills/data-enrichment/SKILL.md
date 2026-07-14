@@ -18,7 +18,7 @@ description: |
   - "employee at", "works at", "company details"
   - "verify email", "check email", "is this email valid"
 metadata:
-  version: 3
+  version: 3.1
 ---
 
 # Data Enrichment with x402 APIs
@@ -80,7 +80,7 @@ npx agentcash@latest fetch https://stableenrich.dev/api/companyenrich/org-enrich
 
 ## People Search (FullEnrich)
 
-Start with domain + seniority:
+Start with **domain + seniority**; add `current_position_titles` only when you need exact title match.
 
 ```bash
 npx agentcash@latest fetch https://stableenrich.dev/api/fullenrich/people-search -m POST -b '{
@@ -89,7 +89,16 @@ npx agentcash@latest fetch https://stableenrich.dev/api/fullenrich/people-search
 }'
 ```
 
+**Key filters**:
+
+- `current_company_domains` — company domain(s)
+- `current_position_seniority_level` — enum: `C-level`, `VP`, `Head`, `Director`, `Manager`, etc.
+- `current_position_titles` — exact title match (returns far fewer results)
+- `person_locations`, `person_professional_network_urls`, and 20+ other FullEnrich filters
+
 **Not valid**: `offset` alone, `company_domain`, `titles`, `seniority`, `limit`, Apollo `person_titles` / `person_seniorities`.
+
+Returns up to 10 people per query. Empty `people` → not billed.
 
 ## Company Search (FullEnrich)
 
@@ -98,6 +107,8 @@ npx agentcash@latest fetch https://stableenrich.dev/api/fullenrich/company-searc
   "domains": [{"value": "anthropic.com", "exact_match": true}]
 }'
 ```
+
+Requires at least one search filter. Paginate via `search_after` from `metadata`.
 
 ## Contact Recovery (Clado)
 
@@ -126,11 +137,23 @@ npx agentcash@latest fetch https://stableenrich.dev/api/minerva/enrich -m POST -
 }'
 ```
 
+Lookup modes: by `minerva_pid` (fastest), `linkedin_url` in each record, or name/email/phone.
+
+## Minerva Email Validation
+
+```bash
+npx agentcash@latest fetch https://stableenrich.dev/api/minerva/validate-emails -m POST -b '{
+  "records": ["john@company.com", "jane@example.com"]
+}'
+```
+
 ## Cost Optimization
 
 Search before enrich: `fullenrich/people-search` ($0.14 if results) -> `pdl/people-enrich` ($0.28 if match) -> `hunter/email-verifier` ($0.03).
 
 For multiple records, use parallel `fetch` calls — there are no bulk enrich endpoints.
+
+FullEnrich people-search supports `excludeFields` to trim response size (e.g. `["educations", "skills", "languages"]`).
 
 ## Email Verification (Hunter)
 
