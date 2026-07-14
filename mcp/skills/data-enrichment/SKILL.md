@@ -24,7 +24,7 @@ description: |
 mcp:
   - agentcash
 metadata:
-  version: 3
+  version: 3.1
 ---
 
 # Data Enrichment with x402 APIs
@@ -130,7 +130,7 @@ agentcash.fetch(
 
 **Key filters**:
 
-- `current_company_domains` — company domain(s); aliases: `domains`, `company_domains`, `domain`
+- `current_company_domains` — company domain(s)
 - `current_position_seniority_level` — enum: `C-level`, `VP`, `Head`, `Director`, `Manager`, etc.
 - `current_position_titles` — exact title match (returns far fewer results)
 - `person_locations`, `person_professional_network_urls`, and 20+ other FullEnrich filters
