@@ -1,7 +1,7 @@
 ---
 name: pulse-network
 description: |
-  Vertical intelligence APIs across 66 x402 origins (826 paid endpoints): compliance screening, crypto/token safety, SEC filings, tax, legal, climate, health, sports, and more. Deterministic primitives from $0.01.
+  Vertical intelligence APIs across 67 x402 origins (827 paid endpoints): compliance screening, crypto/token safety, SEC filings, tax, legal, climate, health, sports, and more. Deterministic primitives from $0.01.
 
   USE FOR:
   - Sanctions/OFAC screening, EU VAT validation, GLEIF LEI lookups
@@ -12,6 +12,7 @@ description: |
   - FDIC bank-health checks, credit-card benefit coverage
   - Real-time weather/air quality, earthquake checks, country risk
   - Deep verticals: healthcare prices, clinical trials, grants, patents, real estate, transit, racing, esports — see rules/origins.md
+  - Send real physical mail (USPS letters, certified mail with tracking) — an ACTION endpoint, not a lookup
 
   TRIGGERS:
   - "sanctions check", "OFAC", "screen this entity", "validate VAT", "LEI"
@@ -21,6 +22,7 @@ description: |
   - "tax rate in", "VAT in", "visa requirements"
   - "is my bank safe", "FDIC", "card benefit"
   - "country risk", "travel safety", "air quality"
+  - "send a letter", "mail this", "certified mail", "USPS tracking"
 
   All origins share one pattern: `https://<vertical>.theaslangroupllc.com`. Use agentcash.discover_api_endpoints to enumerate any origin, and agentcash.fetch to call endpoints.
 metadata:
@@ -29,7 +31,7 @@ metadata:
 
 # PulseNetwork — Vertical Intelligence APIs
 
-66 single-purpose x402 API origins (826 paid endpoints) operated by The Aslan Group LLC, covering finance, compliance, legal, tax, health, climate, energy, sports, and consumer verticals. USDC on Base mainnet (eip155:8453), Coinbase Developer Platform facilitator. No accounts, no API keys.
+67 single-purpose x402 API origins (827 paid endpoints) operated by The Aslan Group LLC, covering finance, compliance, legal, tax, health, climate, energy, sports, and consumer verticals. USDC on Base mainnet (eip155:8453), Coinbase Developer Platform facilitator. No accounts, no API keys.
 
 Catalog: https://pulsenetwork.theaslangroupllc.com · Every origin serves `/openapi.json`, `/.well-known/agent.json`, and `/llms.txt`.
 
@@ -54,8 +56,10 @@ See [rules/getting-started.md](rules/getting-started.md) for installation and wa
 | Real-time air quality + health risk | `https://climatepulse.theaslangroupllc.com/api/climate/air` | $0.05 |
 | Country risk assessment | `https://geopoliticalpulse.theaslangroupllc.com/api/geopolitical/country-risk` | $0.15 |
 | AI-visibility check of any website (verbatim evidence) | `https://marketpulse.theaslangroupllc.com/api/market/ai-visibility-check` | $0.50 |
+| Send a real physical letter — USPS, first-class/certified/international (ACTION: prints & mails on payment) | `https://mailpulse.theaslangroupllc.com/api/letters` | $3–$14 |
+| Verify a mailing address before sending physical mail (USPS-backed) | `https://mailpulse.theaslangroupllc.com/api/verify-address` | $0.01 |
 
-Full directory of all 66 origins grouped by category: [rules/origins.md](rules/origins.md).
+Full directory of all 67 origins grouped by category: [rules/origins.md](rules/origins.md).
 
 ## Workflow
 

@@ -98,3 +98,9 @@ All origins follow `https://<name>.theaslangroupllc.com`. Every origin serves `/
 | `https://collectablespulse.theaslangroupllc.com` | 11 | $0.08–$0.15 | Global collectibles market intelligence API. AI-synthesized valuations for sports cards, coins, comics, vinyl records, Pokémon/MTG/TCGs, |
 | `https://chronicapulse.theaslangroupllc.com` | 9 | $0.05–$0.15 | Global genealogy and historical archive intelligence API. Full-text search across Chronicling America (1770–1963 US newspapers), Library of |
 
+## Fulfillment & Actions
+
+| Origin | Endpoints | Price range | What it does |
+|---|---|---|---|
+| `https://mailpulse.theaslangroupllc.com` | 3 | $0.005–$14 | The fleet's first ACTION origin — does something in the world instead of answering a question. Sends a real physical letter (US First-Class, US Certified with optional return receipt, or international) via USPS through Lob's Print & Mail network: paying causes real postage to print and mail. Free address-deliverability check and free price quote precede the paid send; cheap status/tracking poll afterward. Good referral target from correspondence-heavy verticals (IRS/USCIS notices, demand letters). |
+
