@@ -31,7 +31,7 @@ metadata:
 
 66 single-purpose x402 API origins (826 paid endpoints) operated by The Aslan Group LLC, covering finance, compliance, legal, tax, health, climate, energy, sports, and consumer verticals. USDC on Base mainnet (eip155:8453), Coinbase Developer Platform facilitator. No accounts, no API keys.
 
-Catalog: https://mcp-pulsenetwork.vercel.app · Every origin serves `/openapi.json`, `/.well-known/agent.json`, and `/llms.txt`.
+Catalog: https://pulsenetwork.theaslangroupllc.com · Every origin serves `/openapi.json`, `/.well-known/agent.json`, and `/llms.txt`.
 
 ## Setup
 
